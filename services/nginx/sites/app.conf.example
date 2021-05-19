@@ -1,3 +1,9 @@
+#server {
+#    listen 80;
+#    server_name my.com;
+#    return 301 https://$server_name$request_uri;
+#}
+
 server {
 
     listen 80;
@@ -5,7 +11,7 @@ server {
 
     # For https
     # listen 443 ssl;
-    # listen [::]:443 ssl ipv6only=on;
+    # listen [::]:443 ssl;
     # ssl_certificate /etc/nginx/ssl/default.crt;
     # ssl_certificate_key /etc/nginx/ssl/default.key;
 
