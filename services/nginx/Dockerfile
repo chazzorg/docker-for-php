@@ -2,6 +2,13 @@ FROM nginx:alpine
 
 LABEL maintainer="chazz.top"
 
+#####################################
+# Set Timezone
+#####################################
+
+ARG TZ=UTC
+ENV TZ ${TZ}
+
 COPY nginx.conf /etc/nginx/
 
 # If you're in China, or you need to change sources, will be set CHANGE_SOURCE to true in .env.

@@ -18,6 +18,13 @@ FROM laradock/php-fpm:${BASE_IMAGE_TAG_PREFIX}-${LARADOCK_PHP_VERSION}
 
 LABEL maintainer="chazz.top"
 
+#####################################
+# Set Timezone
+#####################################
+
+ARG TZ=UTC
+ENV TZ ${TZ}
+
 ARG LARADOCK_PHP_VERSION
 
 # Set Environment Variables

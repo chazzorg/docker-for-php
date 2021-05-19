@@ -9,6 +9,13 @@ FROM php:${LARADOCK_PHP_VERSION}-alpine
 
 LABEL maintainer="chazz.top"
 
+#####################################
+# Set Timezone
+#####################################
+
+ARG TZ=UTC
+ENV TZ ${TZ}
+
 ARG LARADOCK_PHP_VERSION
 
 # If you're in China, or you need to change sources, will be set CHANGE_SOURCE to true in .env.

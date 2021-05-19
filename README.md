@@ -23,7 +23,7 @@ docker-for-php  努力简化搭建应用环境过程。
 
 
 **重要 ！！**
-运行服务前，请确认数据和日志目录读写权限；站点目录权限建议更改成`www-data`用户（没有该用户执行`useradd www-data`）
+运行服务前，请确认数据和日志目录读写权限；站点目录组权限建议更改成`www:www-data`（宿主机没有相应用户执行`useradd www-data` `useradd www`）
 
 **使用概览：**
 
