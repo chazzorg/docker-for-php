@@ -33,7 +33,10 @@ RUN apk --update add wget \
   oniguruma-dev \
   libressl \
   libressl-dev \
-  supervisor
+  supervisor \
+  tzdata \
+  && cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime \
+  && echo "Asia/Shanghai" > /etc/timezone
 
 
 RUN pecl channel-update pecl.php.net; \
