@@ -161,6 +161,8 @@ services:
           - http_proxy
           - https_proxy
           - no_proxy
+      environment:
+        - TZ=${TZ}
       volumes:
         - ${APP_PATH_HOST}${CODE_PATH_HOST}:${APP_CODE_PATH_CONTAINER}${APP_CODE_CONTAINER_FLAG}
         - ${APP_PATH_HOST}${LOG_PATH_HOST}${NGINX_HOST_LOG_PATH}:/var/log/nginx
