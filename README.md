@@ -131,9 +131,7 @@ docker-compose down
 
 2 - 在 services/php-worker/supervisord.d目录下，创建队列运行配置文件
 
-3 - 重建容器 `docker-compose build php-worker`
-
-4 - 启动容器 `docker-compose up -d php-worker`
+3 - 启动容器 `docker-compose up -d php-worker`
 
 
 ### 编辑 Docker 镜像
