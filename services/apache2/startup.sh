@@ -17,5 +17,8 @@ if [ ${APACHE_HTTP2} = true ]; then
   service apache2 restart
 fi
 
+# 设置上海时区
+cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
+
 # Start supervisord in foreground
 supervisord

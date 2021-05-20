@@ -1186,7 +1186,8 @@ ARG PGID=1000
 ENV PGID ${PGID}
 
 RUN groupmod -o -g ${PGID} www-data && \
-    usermod -o -u ${PUID} -g www-data www-data
+    usermod -o -u ${PUID} -g www-data www-data && \
+    cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
 
 # Adding the faketime library to the preload file needs to be done last
 # otherwise it will preload it for all commands that follow in this file
