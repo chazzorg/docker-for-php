@@ -1165,6 +1165,16 @@ RUN set -xe; php -v | head -n 1 | grep -q "PHP ${LARADOCK_PHP_VERSION}."
 
 #
 #--------------------------------------------------------------------------
+# install phpcomposer
+#--------------------------------------------------------------------------
+#
+RUN php -r "copy('https://install.phpcomposer.com/installer', 'composer-setup.php');" \
+    && php composer-setup.php \
+    && php -r "unlink('composer-setup.php');" \
+    && mv composer.phar /usr/local/bin/composer
+
+#
+#--------------------------------------------------------------------------
 # Final Touch
 #--------------------------------------------------------------------------
 #
