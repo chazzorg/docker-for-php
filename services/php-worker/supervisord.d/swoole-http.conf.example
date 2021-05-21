@@ -1,0 +1,10 @@
+[program:swoole-http]
+process_name=%(program_name)s_%(process_num)02d
+command=php /var/www/swoole/swoole.php
+autostart=true
+autorestart=true
+numprocs=1
+user=www-data
+redirect_stderr=true
+stderr_logfile=/var/log/swoole-http-scheduler.err.log ; 错误日志文件
+stdout_logfile=/var/log/swoole-http-scheduler.out.log ; 输出日志文件
