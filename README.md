@@ -25,6 +25,8 @@ docker-for-php  努力简化搭建应用环境过程。
 **重要 ！！**
 运行服务前，请确认数据和日志目录读写权限；站点目录组权限建议更改成`www:www-data`（宿主机没有相应用户执行`useradd www-data` `useradd www`）
 
+#### 项目地址 ：[码云](https://gitee.com/chazzorg/docker-for-php)      [github](https://github.com/chazzorg/docker-for-php)
+
 **使用概览：**
 
 让我们了解使用它安装 `NGINX`, `PHP`, `MySQL` 和 `Redis`
