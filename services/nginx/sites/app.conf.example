@@ -45,5 +45,5 @@ server {
     }
 
     error_log /var/log/nginx/app_error.log;
-    access_log /var/log/nginx/app_access.log;
+    access_log /var/log/nginx/app_access.log main;
 }

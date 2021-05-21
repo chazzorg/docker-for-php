@@ -43,5 +43,5 @@ server {
     }
 
     error_log /var/log/nginx/node.com.co.local_error.log;
-    access_log /var/log/nginx/node.com.co.local_access.log;
+    access_log /var/log/nginx/node.com.co.local_access.log main;
 }
