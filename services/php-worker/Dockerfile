@@ -141,6 +141,12 @@ RUN if [ ${INSTALL_SOAP} = true ]; then \
     docker-php-ext-install soap \
 ;fi
 
+#Install SOCKETS package:
+ARG INSTALL_SOCKETS=false
+RUN if [ ${INSTALL_SOCKETS} = true ]; then \
+    docker-php-ext-install sockets \
+;fi
+
 # Install MongoDB drivers:
 ARG INSTALL_MONGO=false
 RUN if [ ${INSTALL_MONGO} = true ]; then \
