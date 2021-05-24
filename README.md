@@ -36,12 +36,17 @@ docker-for-php  努力简化搭建应用环境过程。
 cd docker-for-php
 ```
 
-2. 创建环境配置文件
+2. 创建工作目录
+ ```bash
+cp -r work-example work
+```
+
+3. 创建环境配置文件,确认工作目录路径
  ```bash
 cp .env.example .env
 ```
 
-3. 运行这些容器。
+4. 运行需要的容器。
 ```bash
 docker-compose up -d nginx mysql redis php-fpm
 ```
@@ -172,6 +177,6 @@ docker-compose build
 docker-compose build {服务名称}
 ```
 
-### 自定义工作目录
+### 自定义工作目录路径
 
 如果你想单独存放工作目录，你需要编辑项目下 `.env` 文件中 #Paths# 部分配置属性，如非必要，请勿更改工作目录下预设文件夹名称
