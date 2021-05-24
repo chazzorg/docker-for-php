@@ -243,6 +243,10 @@ services:
         - ${SERVICE_PATH_HOST}/php-server/startup.sh:/opt/startup.sh
       expose:
         - "${PHP_SERVER_HTTP_PORT}"
+        - "${PHP_SERVER_WEBSOCKET_PORT}"
+        - "${PHP_SERVER_RPC_PORT}"
+        - "${PHP_SERVER_TCP_PORT}"
+        - "${PHP_SERVER_UDP_PORT}"
       privileged: true
       networks:
         - backend
