@@ -1,13 +1,13 @@
 # 至少需要一个节点，多个配置多行
 upstream myhttp {
-    server php-worker:9501;
+    server php-server:9501;
 }
 
 server {
 
     listen 80;
     listen [::]:80;
-    server_name swoole.com;
+    server_name phphttp.com;
     index index.php index.html index.htm;
 
     location / {
@@ -27,6 +27,6 @@ server {
         deny all;
     }
 
-    error_log /var/log/nginx/swoole_error.log;
-    access_log /var/log/nginx/swoole_access.log main;
+    error_log /var/log/nginx/phphttp_error.log;
+    access_log /var/log/nginx/phphttp_access.log main;
 }
