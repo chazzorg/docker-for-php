@@ -31,7 +31,7 @@ docker-for-php  努力简化搭建应用环境过程。
 
 让我们了解使用它安装 `NGINX`, `PHP`, `MySQL` 和 `Redis`
 
-1. 将本项目复制到任意位置，进入项目根目录，使用前请确认已安装 docker docker-compose 
+1. 将本项目复制到任意位置，进入项目根目录，使用前请确认已安装 docker docker-compose （linux环境下，运行`./docker-help.sh`快速安装`docker docker-compose git`）
 ```bash
 cd docker-for-php
 ```

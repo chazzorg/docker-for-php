@@ -78,9 +78,10 @@ funInstallDocker(){
 
 
 ################################## 命令支持 #############################
-# 快速生成应用配置
+# 快速创建环境配置文件,工作目录
 funAddEnv(){
     cp .env.example .env
+    cp -r work-example work
 }
 
 # 安装应用服务
@@ -89,6 +90,7 @@ funAddServer(){
     echo 'nginx'
     echo 'php-fpm'
     echo 'php-worker'
+    echo 'php-server'
     echo 'mysql'
     echo 'redis'
     echo 'apache2'
@@ -102,6 +104,7 @@ funRestartServer(){
     echo 'nginx'
     echo 'php-fpm'
     echo 'php-worker'
+    echo 'php-server'
     echo 'mysql'
     echo 'redis'
     echo 'apache2'
@@ -115,6 +118,7 @@ funBuildServer(){
     echo 'nginx'
     echo 'php-fpm'
     echo 'php-worker'
+    echo 'php-server'
     echo 'mysql'
     echo 'redis'
     echo 'apache2'
@@ -124,12 +128,12 @@ funBuildServer(){
 
 # 快速连接redis服务
 funUseRedis(){
-    docker exec -it redis redis-cli
+    docker exec -it docker_redis_1 redis-cli
 }
 
 # 快速连接mysql服务
 funUseMysql(){
-    docker exec -it mysql mysql -uroot -p
+    docker exec -it docker_mysql_1 mysql -uroot -p
 }
 ####################### 命令支持 ##########################
 
@@ -137,12 +141,12 @@ funUseMysql(){
 funCheckDocker
 echo '******  docker compose for php 引导安装脚本 ******:'
 echo '1. 安装docker环境(仅linux下使用)'
-echo '2. 快速创建环境配置文件'
+echo '2. 快速创建环境配置文件,工作目录'
 echo '3. 安装服务'
 echo '4. 重启服务'
 echo '5. 重建容器'
-echo '6. 快速连接redis服务'
-echo '7. 快速连接mysql服务'
+echo '6. redis命令行模式'
+echo '7. mysql命令行模式'
 read aStart
 case $aStart in
     1)
