@@ -6,5 +6,5 @@ autorestart=true
 numprocs=8
 user=www-data
 redirect_stderr=true
-stderr_logfile=/var/log/laravel-scheduler.err.log ; 错误日志文件
-stdout_logfile=/var/log/laravel-scheduler.out.log ; 输出日志文件
+stderr_logfile=/var/log/laravel-worker.err.log ; 错误日志文件
+stdout_logfile=/var/log/laravel-worker.out.log ; 输出日志文件

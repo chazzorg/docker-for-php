@@ -440,7 +440,7 @@ fi
 # Make sure you rebuild your container with every change.
 #
 
-COPY ./my.ini /usr/local/etc/php/conf.d
+COPY ./myphp.ini /usr/local/etc/php/conf.d
 COPY supervisord.conf /etc/supervisord.conf
 
 ENTRYPOINT ["/usr/bin/supervisord", "-n", "-c",  "/etc/supervisord.conf"]

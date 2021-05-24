@@ -146,8 +146,6 @@ services:
           - IMAGEMAGICK_VERSION=${PHP_WORKER_IMAGEMAGICK_VERSION}
       environment:
         - TZ=${TZ}
-      expose:
-        - "9501"
       volumes:
         - ${APP_PATH_HOST}${CODE_PATH_HOST}:${APP_CODE_PATH_CONTAINER}${APP_CODE_CONTAINER_FLAG}
         - ${SERVICE_PATH_HOST}/php-worker/supervisord.d:/etc/supervisord.d
@@ -231,5 +229,20 @@ services:
         - ${APP_PATH_HOST}${DATA_PATH_HOST}${REDIS_MY_DATA}:/data
       ports:
         - "${REDIS_PORT}:6379"
+      networks:
+        - backend
+
+### php-server ################################################
+    php-server:
+      build:
+        context: ${SERVICE_PATH_HOST}/php-server
+        args:
+          - APP_CODE_PATH_CONTAINER=${APP_CODE_PATH_CONTAINER}
+      volumes:
+        - ${APP_PATH_HOST}${CODE_PATH_HOST}:${APP_CODE_PATH_CONTAINER}${APP_CODE_CONTAINER_FLAG}
+        - ${SERVICE_PATH_HOST}/php-server/startup.sh:/opt/startup.sh
+      expose:
+        - "${PHP_SERVER_HTTP_PORT}"
+      privileged: true
       networks:
         - backend

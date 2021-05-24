@@ -135,6 +135,14 @@ docker-compose down
 
 3 - 启动容器 `docker-compose up -d php-worker`
 
+### 自定义 PHP HTTP Server 【php-server】
+
+1 - 打开 `.env` 文件, 设置 php-server 相关参数，自行添加所需要开放端口
+
+2 - 编辑 services/php-server/startup.sh 服务启动文件，添加服务启动命令
+
+3 - 启动容器 `docker-compose up -d php-server`
+
 
 ### 编辑 Docker 镜像
 
