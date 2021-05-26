@@ -243,11 +243,11 @@ services:
         - ${APP_PATH_HOST}${CODE_PATH_HOST}:${APP_CODE_PATH_CONTAINER}${APP_CODE_CONTAINER_FLAG}
         - ${SERVICE_PATH_HOST}/php-server/startup.sh:/opt/startup.sh
       ports:
-        - "${PHP_SERVER_HTTP_PORT}"
-        - "${PHP_SERVER_WEBSOCKET_PORT}"
-        - "${PHP_SERVER_RPC_PORT}"
-        - "${PHP_SERVER_TCP_PORT}"
-        - "${PHP_SERVER_UDP_PORT}"
+        - "${PHP_SERVER_HTTP_PORT}:9501"
+        - "${PHP_SERVER_WEBSOCKET_PORT}:9502"
+        - "${PHP_SERVER_RPC_PORT}:9503"
+        - "${PHP_SERVER_TCP_PORT}:9504"
+        - "${PHP_SERVER_UDP_PORT}:9505"
       privileged: true
       networks:
         - backend
