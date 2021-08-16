@@ -92,7 +92,7 @@ dockere ps -a
 
 **例子:** 查看容器中运行的进程信息，支持 ps 命令参数
 ```bash 
-docker top {容器名称/容器ID} -aux|grep {进程关键字}
+docker top {容器名称/容器ID} -aux|grep {进程关键字} | wc -l
 ```
 
 **例子:** 开启指定容器
