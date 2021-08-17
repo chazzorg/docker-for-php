@@ -7,7 +7,7 @@ server {
 
     listen 80;
     listen [::]:80;
-    server_name phphttp.com;
+    server_name app.test;
     index index.php index.html index.htm;
 
     location / {
@@ -27,6 +27,6 @@ server {
         deny all;
     }
 
-    error_log /var/log/nginx/phphttp_error.log;
-    access_log /var/log/nginx/phphttp_access.log main;
+    error_log /var/log/nginx/httpserver_error.log;
+    access_log /var/log/nginx/httpserver_access.log main;
 }

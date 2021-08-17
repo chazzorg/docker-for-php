@@ -20,5 +20,8 @@ fi
 # 设置上海时区
 cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
 
+sed -i '/nodaemon=true/alogfile=\/var\/log\/supervisord.log' /opt/docker/etc/supervisor.conf
+sed -i '/nodaemon=true/apidfile=\/var\/run\/supervisord.pid' /opt/docker/etc/supervisor.conf
+
 # Start supervisord in foreground
 supervisord

@@ -9,7 +9,7 @@ server {
     # ssl_certificate /etc/nginx/ssl/default.crt;
     # ssl_certificate_key /etc/nginx/ssl/default.key;
 
-    server_name app.com;
+    server_name app.test;
     root /var/www/app/public;
     index  index.html index.htm index.php;
 
