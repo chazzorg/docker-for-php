@@ -93,7 +93,7 @@ funAddEnv(){
 
 # 安装应用服务
 funAddServer(){
-    eecho '******  可选择服务如下,请自由组合： ******:'
+    echo '******  可选择服务如下,请自由组合： ******:'
     echo 'nginx'
     echo 'php-fpm'
     echo 'php-worker'
